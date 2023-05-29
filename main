@@ -1543,11 +1543,11 @@ local function createButton(name, fe, owner, experience, description, code)
 	local selectedScript = nil
 	
 	RunButton.MouseButton1Click:Connect(function()
-		if ScriptTitleLabel.Text == name and selectedScript then
+		if selectedScript then
 			loadstring(selectedScript)()
 		end
 	end)
-
+	
 	local CreatorLabel = Instance.new("TextLabel", frame)
 	CreatorLabel.ZIndex = 4
 	CreatorLabel.Size = UDim2.new(0.857, 0, 0.05, 14)
