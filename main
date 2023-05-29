@@ -1512,6 +1512,9 @@ local function createButton(name, fe, owner, experience, description, code)
 	button.Text = ""
 	button.ZIndex = 5
 	button.Size = UDim2.new(1, 0, 1, 0)
+	
+	-- Store the script code as a custom property of the button
+	button:SetAttribute("ScriptCode", code)
 
 	local buttonCorner = Instance.new("UICorner", frame)
 	buttonCorner.CornerRadius = UDim.new(0, 8)
@@ -1539,14 +1542,13 @@ local function createButton(name, fe, owner, experience, description, code)
 	ScriptTitleLabel.Name = "Title"
 
 	local RunButton = SelectedFrame.RunButton
-	
-	local selectedScript = ""
-	
+
 	RunButton.MouseButton1Click:Connect(function()
-		if selectedScript ~= "" then
-			loadstring(selectedScript)()
-		end
+		if ScriptTitle.Text == ScriptTitleLabel.Text then
+				loadstring(code)()
+			end
 	end)
+
 	
 	local CreatorLabel = Instance.new("TextLabel", frame)
 	CreatorLabel.ZIndex = 4
@@ -1571,9 +1573,8 @@ local function createButton(name, fe, owner, experience, description, code)
 		elseif fe == "Partly" then
 			SelectedFrame.FeValue.Text = "Partly"
 			SelectedFrame.FeValue.TextColor3 = Color3.fromRGB(255, 255, 255)
-
+			
 		end
-		selectedScript = code
 	end)
 end
 
