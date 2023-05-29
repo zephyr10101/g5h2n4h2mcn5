@@ -1540,10 +1540,10 @@ local function createButton(name, fe, owner, experience, description, code)
 
 	local RunButton = SelectedFrame.RunButton
 	
-	local selectedScript = nil
+	local selectedScript = ""
 	
 	RunButton.MouseButton1Click:Connect(function()
-		if selectedScript then
+		if selectedScript ~= "" then
 			loadstring(selectedScript)()
 		end
 	end)
