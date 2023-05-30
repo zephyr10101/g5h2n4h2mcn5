@@ -1621,6 +1621,7 @@ createButton("Cart Ride Hub", true, "??", "Cart Rides", "A very good cart ride h
 createButton("FE ChatHax", true, "??", "Universal", "Basically you type a message you will say and in your message it will put another line below it showing what someone else will say.", "loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()")
 createButton("FE UTG V3", true, "Blukez", "R6 Games", "A lot of FE scripts that modify your character.", 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()')
 createButton("BloodBath", true, "BloodBath", "Blox Fruits", "A really good Blox Fruit script. Works on some executors, more will be available in the future.", 'loadstring(game:HttpGet("https://raw.githubusercontent.com/Pa1nx/BloodBathScripts/main/BloxFruits"))()')
+createButton("Spy Gui", false, "MichaelScripter", "Universal", "A very good spy gui, figure out peoples account age, the in-game gamepasses they own, enable esp and much more!", 'loadstring(game:HttpGet("https://raw.githubusercontent.com/MichaelScripter/MiniScript/main/Spy%20gui.lua"))()')
 
 -- Script Searching
 
