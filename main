@@ -2,8 +2,6 @@
 
 local Player = game.Players.LocalPlayer
 
-if Player:FindFirstChild("ZephyrClient") == nil then
-
 -- GUI
 
 -- GUI Instances
@@ -2052,5 +2050,3 @@ local function toggleZaza1()
 Toggle1Button.MouseButton1Click:Connect(toggleZaza1)
 
 	toggleZaza1()
-
-end
